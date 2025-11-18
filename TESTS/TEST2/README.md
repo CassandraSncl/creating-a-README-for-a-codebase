@@ -1,114 +1,127 @@
-# **Projet TEST2**
+# Projet TEST2
 
-## **Présentation générale**
-Le projet **TEST2** est un ensemble de scripts Python et notebooks Jupyter conçus pour effectuer des opérations de traitement de données, de visualisation et de manipulation de fichiers. Il inclut des fonctions pour la création et la manipulation de DataFrames, des calculs mathématiques, ainsi que des outils pour gérer des fichiers et dossiers.
+## Présentation générale
+Ce projet est un ensemble de scripts Python et notebooks Jupyter conçus pour effectuer diverses opérations de traitement de données, de manipulation de fichiers et de visualisation. Il inclut des fonctions pour la création et la manipulation de DataFrames, des opérations mathématiques de base, ainsi que des outils pour la gestion de fichiers et dossiers.
 
-Le projet est organisé en plusieurs modules répartis dans des dossiers distincts, chacun ayant un rôle spécifique.
-
----
-
-## **Arborescence du dossier**
+## Arborescence du dossier
 ```
 TEST2/
-│
-├── code3.py                # Script principal avec des fonctions de traitement de données
-├── data2.csv               # Fichier CSV de données
-│
-├── DOSSIER 1/              # Module de traitement de données et visualisation
-│   ├── code1.py            # Fonctions de génération de DataFrames et calculs
-│   ├── code5.ipynb         # Notebook Jupyter pour l'analyse de données
-│   ├── data.csv            # Fichier CSV de données
-│   └── test1.txt           # Fichier texte de test
-│
-├── DOSSIER 2/              # Module de gestion de fichiers et calculs mathématiques
-│   ├── code2.py            # Fonctions de gestion de fichiers et dossiers
-│   └── code4.ipynb         # Notebook Jupyter pour des calculs et visualisations
-│   └── test2.docx         # Document Word de test
-│
+    code3.py          # Script principal avec fonctions de traitement de données
+    data2.csv         # Fichier de données CSV
+    DOSSIER 1/
+        code1.py      # Script avec fonctions de manipulation de fichiers
+        code5.ipynb   # Notebook Jupyter pour l'analyse de données
+        data.csv      # Fichier de données CSV
+        test1.txt     # Fichier texte de test
+    DOSSIER 2/
+        code2.py      # Script avec fonctions mathématiques
+        code4.ipynb   # Notebook Jupyter pour la visualisation
+        test2.docx    # Document Word de test
 ```
 
----
+## Bibliothèques nécessaires
+- Python 3.7+
+- pandas
+- numpy
+- matplotlib
+- os (standard library)
+- jupyter (pour exécuter les notebooks)
 
-## **Bibliothèques nécessaires**
-Pour exécuter ce projet, installez les dépendances suivantes :
+Installez les dépendances avec:
 ```bash
-pip install pandas numpy matplotlib
+pip install pandas numpy matplotlib jupyter
 ```
 
----
+## Fonctionnement global
+Le projet est organisé autour de plusieurs modules qui fournissent des fonctionnalités spécifiques:
+1. **Manipulation de données**: Création et traitement de DataFrames
+2. **Opérations mathématiques**: Fonctions de base et calculs avancés
+3. **Gestion de fichiers**: Lecture, écriture et manipulation de fichiers
+4. **Visualisation**: Création de graphiques simples
 
-## **Fonctionnement global**
-Le projet est structuré en plusieurs modules :
-1. **`DOSSIER 1`** : Contient des fonctions pour la génération de DataFrames, l'analyse de données et la visualisation.
-2. **`DOSSIER 2`** : Gère les opérations de gestion de fichiers et dossiers, ainsi que des calculs mathématiques.
-3. **Scripts principaux** : `code3.py` et `code2.py` fournissent des fonctions utilitaires pour le traitement de données et la manipulation de fichiers.
+## Résumé fichier par fichier
 
----
+### code3.py
+Contient des fonctions pour la création et le traitement de DataFrames:
+- `example_function()`: Crée un DataFrame avec des valeurs aléatoires
+- `another_function(x)`: Calcule la racine carrée d'un nombre
+- `yet_another_function(lst)`: Double chaque élément d'une liste
 
-## **Résumé fichier par fichier**
+### data2.csv
+Fichier de données CSV principal utilisé par le projet.
 
-### **`code3.py`**
-- **Fonctions principales** :
-  - `example_function()` : Génère un DataFrame aléatoire avec des colonnes `A`, `B`, `C`.
-  - `another_function(x)` : Calcule la racine carrée d'un nombre.
-  - `yet_another_function(lst)` : Double chaque élément d'une liste.
+### DOSSIER 1/code1.py
+Script de gestion de fichiers avec:
+- `list_files(folder)`: Liste les fichiers dans un dossier
+- `create_folder(folder)`: Crée un dossier s'il n'existe pas
+- `create_file(path, content)`: Crée un fichier avec du contenu
+- `read_file(path)`: Lit le contenu d'un fichier
 
-### **`DOSSIER 1/code1.py`**
-- **Fonctions principales** :
-  - `create_dataframe(list_letters, list_numbers=None)` : Crée un DataFrame à partir de listes de lettres et de nombres.
-  - `count_lines(file_path)` : Compte le nombre de lignes dans un fichier.
+### DOSSIER 1/code5.ipynb
+Notebook Jupyter pour l'analyse de données contenant:
+- Importation de données
+- Nettoyage et transformation
+- Visualisation des résultats
 
-### **`DOSSIER 1/code5.ipynb`**
-- **Contenu** : Notebook Jupyter pour l'analyse de données, probablement lié à `data.csv`.
+### DOSSIER 1/data.csv
+Fichier de données CSV utilisé par le notebook code5.ipynb.
 
-### **`DOSSIER 2/code2.py`**
-- **Fonctions principales** :
-  - `list_files(folder)` : Liste les fichiers dans un dossier.
-  - `create_folder(folder)` : Crée un dossier s'il n'existe pas.
-  - `create_file(path, content)` : Crée un fichier avec un contenu donné.
-  - `read_file(path)` : Lit le contenu d'un fichier.
+### DOSSIER 1/test1.txt
+Fichier texte de test pour les opérations de lecture/écriture.
 
-### **`DOSSIER 2/code4.ipynb`**
-- **Contenu** : Notebook Jupyter pour des calculs et visualisations (ex. `matplotlib`).
+### DOSSIER 2/code2.py
+Script avec fonctions mathématiques:
+- `hello_world()`: Affiche "Hello world!"
+- `add(a, b)`: Additionne deux nombres
+- `multiply(a, b)`: Multiplie deux nombres
+- `divide(a, b)`: Divise deux nombres (avec gestion de la division par zéro)
+- `subtract(a, b)`: Soustrait deux nombres
+- `factorial(n)`: Calcule la factorielle d'un nombre
 
----
+### DOSSIER 2/code4.ipynb
+Notebook Jupyter pour la visualisation contenant:
+- Création de graphiques avec matplotlib
+- Visualisation de données simples
 
-## **Comment lancer le projet**
-1. **Cloner le dépôt** :
+### DOSSIER 2/test2.docx
+Document Word de test pour les opérations de gestion de fichiers.
+
+## Comment lancer le projet
+
+1. **Installer les dépendances**:
    ```bash
-   git clone <url-du-projet>
-   cd TEST2
+   pip install pandas numpy matplotlib jupyter
    ```
 
-2. **Installer les dépendances** :
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Exécuter les scripts** :
-   - Pour `code3.py` :
+2. **Exécuter les scripts**:
+   - Pour code3.py:
      ```bash
      python code3.py
      ```
-   - Pour `DOSSIER 1/code1.py` :
+   - Pour code1.py:
      ```bash
-     python DOSSIER\ 1/code1.py
+     python DOSSIER1/code1.py
      ```
-   - Pour `DOSSIER 2/code2.py` :
+   - Pour code2.py:
      ```bash
-     python DOSSIER\ 2/code2.py
+     python DOSSIER2/code2.py
      ```
 
-4. **Lancer les notebooks Jupyter** :
+3. **Lancer les notebooks**:
    ```bash
    jupyter notebook
    ```
-   Puis ouvrir `DOSSIER 1/code5.ipynb` et `DOSSIER 2/code4.ipynb`.
+   Puis ouvrez les notebooks code5.ipynb et code4.ipynb dans l'interface Jupyter.
 
----
+4. **Utilisation des fonctions**:
+   Importez les fonctions dans vos scripts Python:
+   ```python
+   from code3 import example_function
+   from DOSSIER1.code1 import list_files
+   from DOSSIER2.code2 import add
+   ```
 
-## **Conclusion**
-Ce projet est un ensemble de scripts Python et notebooks Jupyter pour le traitement de données, la visualisation et la gestion de fichiers. Il est modulaire et peut être étendu pour des applications plus complexes.
-
-**Auteur** : [Votre nom]
-**Date** : [Date de création]
+## Notes supplémentaires
+- Assurez-vous que tous les fichiers de données sont présents dans leurs emplacements respectifs
+- Les notebooks Jupyter nécessitent Jupyter Notebook ou JupyterLab installé
+- Pour les opérations de gestion de fichiers, vérifiez les permissions d'accès aux dossiers et fichiers
