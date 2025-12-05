@@ -1,0 +1,15 @@
+python-dotenv
+mistralai
+faiss-cpu
+numpy
+os
+json
+re
+time
+random
+concurrent.futures
+sentence_transformers
+pinecone
+pathlib
+matplotlib
+pandas
